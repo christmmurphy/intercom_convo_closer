@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+require 'net/http'
+require 'uri'
+require 'json'
+require 'intercom'
