@@ -4,60 +4,51 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Intercom Populate</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>Intercom Tools</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/" >Intercom - Alec Baldwin</a>
+          <a class="navbar-brand" href="/">Intercom API Poster</a>
         </div>
       </div>
     </nav>
-
     <div class="jumbotron">
-      <div class="container">
-      </br>
-        <p>Paste in your personal access token and specify the number of users / companies.</p>
-      </div>
-
-      <div class="container">
-        <form method="POST" action="/close" style="width:50%">
-            <div class="form-group">
-              <label>Personal Access Token:</label>
-              <input type="text" class="form-control" name="pat">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput">Inbox ID:</label>
-              <input type="text" class="form-control" id="inbox" name="inbox_id">
-            </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Admin ID:</label>
-              <input type="text" class="form-control" id="admin" name="admin_id">
-            </div>
-
-
-
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-      </div>
+      <div class="container"></br>
+      <p>Choose to OPEN or CLOSE <strong>ALL</strong> conversations in an inbox 🙌 :</p>
     </div>
-
     <div class="container">
-      <footer>
-        <p>Contribute <a href="https://github.com/christmmurphy/intercom_convo_closer">here</a>.</p>
-      </footer>
-    </div>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-
-  </body>
+      <form method="POST" action="/inbox" style="width:50%">
+        <div class="form-group">
+              <input type="radio" value="true" name="operation" autocomplete="off">
+              Open
+              <input type="radio" value="false" name="operation" autocomplete="off" checked="checked">
+              Close
+        </br>
+        </br>
+        </br>
+        <p>Provide your <strong><a href="https://developers.intercom.com/docs/personal-access-tokens">token</a></strong> 👍</p>
+        <input type="text" class="form-control" name="pat">
+      </br>
+      </div>
+      <div class="form-group">
+        <p>Provide the ID of the <strong>inbox</strong> to target 👍 </p>
+        <input type="text" class="form-control" id="inbox" name="inbox_id">
+        </br>
+      </div>
+      <div class="form-group">
+        <p>Provide the ID of the <strong>admin</strong> performing the action 👍 </p>
+        <input type="text" class="form-control" id="admin" name="admin_id">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <p style="font-size:small;padding-top:20px;">Contribute <a href="https://github.com/christmmurphy/intercom_convo_closer">here</a>.</p>
+  </div>
+</div>
+</body>
 </html>
