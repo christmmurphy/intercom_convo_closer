@@ -1,5 +1,7 @@
+source 'https://rubygems.org'
+gem 'sinatra'
 require 'net/http'
 require 'uri'
 require 'json'
 require 'sinatra'
-gem 'intercom', '~> 3.5.25'
+require 'intercom'
