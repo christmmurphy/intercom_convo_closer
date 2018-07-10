@@ -1,11 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    intercom (3.5.25)
+      json (>= 1.8)
+    json (2.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  intercom (~> 3.5.25)
 
 BUNDLED WITH
    1.16.2
