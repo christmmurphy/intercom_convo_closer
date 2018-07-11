@@ -1,7 +1,4 @@
 source 'https://rubygems.org'
 gem 'sinatra'
-gem 'net/http'
-gem 'uri'
 gem 'json'
-gem 'sinatra'
 gem 'intercom'

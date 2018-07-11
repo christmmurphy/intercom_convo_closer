@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    intercom (3.5.25)
+      json (>= 1.8)
+    json (2.1.0)
     mustermann (1.0.2)
     rack (2.0.5)
     rack-protection (2.0.3)
@@ -16,6 +19,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  intercom
+  json
   sinatra
 
 BUNDLED WITH
