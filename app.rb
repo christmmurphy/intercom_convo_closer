@@ -1,6 +1,5 @@
-require 'Intercom'
-require 'rubygems'
 require 'sinatra'
+require 'intercom'
 
   get '/' do
     erb :index
